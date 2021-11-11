@@ -1,0 +1,32 @@
+Requirement: The automation requirements are given below .
+
+Feature: Verify wish list feature and the lowest price item to cart  
+  
+   Scenario: Add four items to the wishlist and add lowest of them to cart  
+    Given I login to "https://testscriptdemo.com/"
+    Given I add four products to my wishlist 
+    When I view my whishlist table 
+    Then I find total four selected items in my wish list  
+    When I search for lowest price product
+    And I am able to add the lowest price item to the cart 
+    Then I am able to verify the item in the cart   
+ 
+Design: The framework is designed using Java / Selenium / Cucumber / BDD using Page object design pattern and object oriented methodology. 
+I have created a page file with all the required locators that will be used to carry out the action on the pages. 
+A page action file is created to perform the required user actions as per the requirement. 
+The test execution is done in chrome browser; however the framework can be extended to any browser after adding the dependencies.
+I have created a runner file with Testng framework to run the test cases. 
+Config.properties file is used to pass the url and browser details. 
+
+Positive elements of the design: The frame work is scalable, we can add more page files and action file as per the requirement and expand the coverage.
+
+Improvements: 
+Reporting and logging mechanism will need to be improved.
+In case any exceptions during execution , webdriver close is not implemented , it needs to be improved.   
+
+How to Run the Project : 
+
+1) Run tsdrunner.java using Testng.  
+ 
+
+   
